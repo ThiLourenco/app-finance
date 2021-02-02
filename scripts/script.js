@@ -12,4 +12,3 @@ function cancelTransaction () {
 
 btnTransaction.addEventListener('click', addTransaction);
 btnCancel.addEventListener('click', cancelTransaction);
-
