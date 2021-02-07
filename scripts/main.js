@@ -43,6 +43,10 @@ const Transaction = {
 		App.reload();
 	},
 
+	update(index) {
+		
+	},
+
 	remove(index) {
 		Transaction.all.splice(index, 1);
 
@@ -94,8 +98,13 @@ const DOM = {
       <td class="description">${transaction.description}</td>
       <td class="${CSSclass}">${amount}</td>
       <td class="date">${transaction.date}</td>
-      <td>
-          <img onclick="Transaction.remove(${index})" src="./assets/minus.svg" alt="Remover transação">
+      <td class="btn-icon">
+				<div>
+					<img class="btn-update" onclick="Transaction.update(${index})" src="./assets/edit.svg" alt="Editar transação">
+				</div>
+				<div>
+					<img class="btn-remover" onclick="Transaction.remove(${index})" src="./assets/minus.svg" alt="Remover transação">
+				</div>
       </td>
       `;
 
