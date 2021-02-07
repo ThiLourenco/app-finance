@@ -21,7 +21,7 @@ const handleSubmit = (e) => {
 		Form.clearFields()
 		cancelTransaction()
 	} catch (error) {
-		alert(error.message)
+		console.error(error.message);
 	}
 }
 
@@ -171,11 +171,27 @@ const Form = {
 
 	validateFields() {
 		const { description, amount, date } = Form.getValues();
+		
+		if (description.trim() === '') {
+			document.querySelector('.handle-error.description').innerHTML = 'Informe a descrição - (Ex. Internet).';
+		} else {
+			document.querySelector('.handle-error.description').innerHTML = '';
+		}
 
-		if (description.trim() === '' ||
-			amount.trim() === '' ||
-			date.trim() === '') {
-			throw new Error('Por favor, preencha todos os campos');
+		if (amount.trim() === '') {
+			document.querySelector('.handle-error.amount').innerHTML = 'Informe a valor - (Ex. 99.99 ou negativo -99.99). </br>';
+		} else {
+			document.querySelector('.handle-error.amount').innerHTML = '';
+		}
+
+		if (date.trim() === '') {
+			document.querySelector('.handle-error.date-form').innerHTML = 'Informe a data - (Ex: 04/01/2020).';
+		} else {
+			document.querySelector('.handle-error.date-form').innerHTML = '';
+		}
+
+		if (description.trim() === '' || amount.trim() === '' || date.trim() === '') {
+				throw new Error('Por favor, verifique e preencha todos os campos do formulário !');
 		}
 	},
 

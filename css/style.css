@@ -95,6 +95,13 @@ button:hover {
   margin-top: 1.3rem;
 }
 
+.button.new img {
+  position: relative;
+  top: 4px;
+  left: 2px;
+  color: var(--green);
+}
+
 .button.cancel {
   color: var(--red);
   border: 2px var(--red) solid;
@@ -310,6 +317,12 @@ table tbody tr:hover .btn-remover {
   /* position: relative;
   z-index: 1; */
  
+}
+
+.modal-overlay small.handle-error.description,
+.modal-overlay small.handle-error.amount,
+.modal-overlay small.handle-error.date-form {
+  color: red;
 }
 
 /* Form */

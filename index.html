@@ -66,7 +66,7 @@
     <section id="transaction">
       <h2 class="sr-only">Transações</h2>
       
-      <a href="#" class="button new">+ Nova Transação</a>
+      <a href="#" class="button new"> <img src="./assets/plus-solid.svg"> Nova Transação</a>
       
       <table id="data-table">
         <thead>
@@ -96,6 +96,7 @@
                 name="description" 
                 placeholder="Descrição"
             />
+            <small class="handle-error description"></small>
           </div>
 
           <div class="input-group">
@@ -107,6 +108,7 @@
                 step="0.01"
                 placeholder="0,00"
             />
+            <small class="handle-error amount"></small>
             <small class="help">Use o sinal - (negativo) para despesas e . (ponto) para casas decimais.</small>
           </div>
 
@@ -117,6 +119,9 @@
                 id="date" 
                 name="date" 
             />
+            <small class="handle-error date-form"></small>
+            <small class="handle-error date-form"></small>
+            <small class="handle-error date-form"></small>
           </div>
 
           <div class="input-group actions">
