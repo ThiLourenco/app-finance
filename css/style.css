@@ -258,7 +258,7 @@ td.btn-icon div {
 }
 
 td.btn-icon div img {
-  margin: 2px;
+  margin: 3px;
 }
 
 .btn-update,
@@ -406,10 +406,9 @@ footer p a:hover {
     gap: 2rem;
   }
 
-  #data-table {
-    width: 100%;
+  td.btn-icon div span img {
+    margin: 4px;
   }
-
 }
 
 @media (min-width: 400px) and (max-width: 799px) {
@@ -421,7 +420,7 @@ footer p a:hover {
     max-width: 270px;
   }
 
-  td.btn-icon div img {
+  td.btn-icon div span img {
     margin: 5px;
   }
 }
