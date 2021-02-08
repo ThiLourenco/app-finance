@@ -26,7 +26,7 @@ const handleSubmit = (e) => {
 }
 
 const getStorage = () => {
-	let data = '';
+	let data = [];
 	return data = JSON.parse(localStorage.getItem('dev.finances:transactions')) || [];
 }
 
@@ -48,9 +48,11 @@ const Transaction = {
 	},
 
 	remove(index) {
-		Transaction.all.splice(index, 1);
+		if(confirm('Deseja realmente excluir?')) { 
+			Transaction.all.splice(index, 1);
 
-		App.reload();
+			App.reload();
+		}
 	},
 
 	incomes() {
