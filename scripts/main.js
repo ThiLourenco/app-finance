@@ -100,10 +100,12 @@ const DOM = {
       <td class="date">${transaction.date}</td>
       <td class="btn-icon">
 				<div>
-					<img class="btn-update" onclick="Transaction.update(${index})" src="./assets/edit.svg" alt="Editar transação">
-				</div>
-				<div>
-					<img class="btn-remover" onclick="Transaction.remove(${index})" src="./assets/minus.svg" alt="Remover transação">
+					<span>
+						<img class="btn-update" onclick="Transaction.update(${index})" src="./assets/edit.svg" alt="Editar transação">
+					</span>
+					<span>
+						<img class="btn-remover" onclick="Transaction.remove(${index})" src="./assets/minus.svg" alt="Remover transação">
+					</span>
 				</div>
       </td>
       `;

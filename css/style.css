@@ -197,7 +197,18 @@ header {
   width: 100%;
   border-spacing: 0 0.5rem;
   color: var(--gray);
-} 
+
+  table-layout: auto;
+  
+}
+
+#data-table .description {
+  white-space:pre-line;
+  word-break: keep-all;
+  max-width: 400px;
+
+  text-align: justify;
+}
 
 table thead tr th:first-child,
 table tbody tr td:first-child {
@@ -242,23 +253,15 @@ td.expense {
   color: var(--red);
 }
 
-td.btn-icon {
-  display: flex;
-  flex-direction: row;
+td.btn-icon div {
+  display: inline-block;
 }
 
-td.btn-icon div { 
-  padding: 3px;
+td.btn-icon div img {
+  margin: 2px;
 }
 
-.btn-update {
-  float: left;
-  opacity: 0;
-  visibility: hidden;
-  cursor: pointer;
-  transition: all 0.7s;
-}
-
+.btn-update,
 .btn-remover {
   float: left;
   opacity: 0;
@@ -380,9 +383,21 @@ footer p a:hover {
 }
 
 /* Responsive */
-@media (min-width: 800px) {
+@media (min-width: 1024px ) and (max-width: 1450px) {
   html {
-    font-size: 87.5% /* 14px */
+    font-size: 90.5%;
+  }
+
+  #balance {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1024px) {
+  html {
+    font-size: 87.5%; /* 14px */
   }
 
   #balance {
@@ -391,4 +406,22 @@ footer p a:hover {
     gap: 2rem;
   }
 
+  #data-table {
+    width: 100%;
+  }
+
+}
+
+@media (min-width: 400px) and (max-width: 799px) {
+  html {
+    font-size: 87.5%; /* 14px */
+  }
+
+  #data-table .description {
+    max-width: 270px;
+  }
+
+  td.btn-icon div img {
+    margin: 5px;
+  }
 }
