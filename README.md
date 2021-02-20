@@ -3,13 +3,12 @@
 </h1>
 
 <p align="center">
-  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-technology">Technology</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-newfeatures">New features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="https://thilourenco.github.io/app-finance/" target="_blank">Deploy</a>
 </p>
-
 
 <br>
 
@@ -17,7 +16,7 @@
   <img alt="dev.finances" src="./.github/devfinances.png" width="100%">
 </p>
 
-## 🚀 Tecnologias
+## 🚀 Technology
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
@@ -25,7 +24,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - CSS
 - JavaScript
 
-## 💻 Projeto
+## 💻 Project
 
 O dev.finances é uma aplicação de controle financeiro, onde é possível cadastrar e excluir transações e ver o saldo de entrada e saída 💰
 
@@ -46,7 +45,7 @@ Você pode visualizar o layout do projeto através [desse link](https://www.figm
 - [X] Add icons
 - [X] Transition effects
 
-## :memo: Licença
+## :memo: License
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
