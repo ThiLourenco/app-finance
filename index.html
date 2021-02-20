@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Primary Meta Tags -->
+
   <title>dev.Finance$ - Controle Financeiro </title>
   <meta name="title" content="dev.Finance$ - Controle Financeiro">
   <meta name="description" content="Uma simples mas eficiente aplicação para controle financeiro e organização de despesas, realizando o controle de entrada e saida, organize agora mesmo suas finanças com o dev.Finance$ !!">
@@ -23,6 +23,7 @@
   <meta property="twitter:description" content="Uma simples mas eficiente aplicação para controle financeiro e organização de despesas, realizando o controle de entrada e saida, organize agora mesmo suas finanças com o dev.Finance$ !!">
   <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
 
+  <link rel="shortcut icon" href="./assets/dollar.svg">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,700;1,100;1,300;1,400&display=swap" rel="stylesheet">  
@@ -30,8 +31,15 @@
 </head>
 
 <body>
+  
   <header>
     <img src="./assets/logo.svg" alt="Logo Dev Finance">
+    <div id="change-theme">
+      <input type="checkbox" id="checkbox">
+      <label for="checkbox">
+        <div id="ball"></div>
+      </label>
+    </div>
   </header>
 
   <main class="container">
@@ -135,15 +143,13 @@
 
   <footer>
     <p>Created with ❤️</p>
-    <p><a href="https://github.com/ThiLourenco" target="_blank">Thiago Lourenço - 2021</a> </p>
+    <p><a href="https://github.com/ThiLourenco" target="_blank" rel="noreferrer" class="githubIcon"><img src='./assets/GitHub.svg' ></a></p>
+    <p>dev.finance$</p>
+    
   </footer>
 
-  <script src="script/utils/Dom.js"></script>
-  <script src="script/utils/Utils.js"></script>
-  <script src="script/utils/Form.js"></script>
-  <script src="script/models/transactions.js"></script>
-  <script src="script/controller/transactionController.js"></script>
-  <script src="script/index.js"></script>
+  <script src="src/theme.js"></script>
+  <script src="src/main.js"></script>
 </body>
 
 </html>
