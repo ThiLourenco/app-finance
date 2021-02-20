@@ -33,12 +33,12 @@ O dev.finances é uma aplicação de controle financeiro, onde é possível cada
 
 Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/7Vu9DzUaCZIV4nibzkjgB4/dev.finance%24-Maratona-Discover). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
-## New features
+## 🚧 New features
 
-- [x] Refactoring;
-- [X] Add custom error message for each field;
-- [X] Add dark-mode;
-- [X] Responsiveness;
+- [x] Refactoring
+- [X] Add custom error message for each field
+- [X] Add dark-mode
+- [X] Responsiveness
 - [X] C
 - [X] R
 - [ ] U - ( Loading... )
