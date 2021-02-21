@@ -48,6 +48,6 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
 
 ---
 
-Projeto criado durante a maratona discovery da 🚀[Rocketseat](https://rocketseat.com.br/) e ministrado pelo Mayke Brito, :wave: [participe da nossa comunidade!](https://discord.gg/YxU7fJT) 🚀.
+Projeto criado durante a maratona discovery da 🚀[Rocketseat](https://rocketseat.com.br/) ministrado pelo Mayke Brito, :wave: [participe da nossa comunidade!](comunidade.rocketseat.com.br) 🚀.
 
 Feito com ♥ by Thiago Lourenço.
