@@ -13,7 +13,7 @@
 <br>
 
 <p align="center">
-  <img alt="dev.finances" src="./.github/devfinances.png" width="100%">
+  <img alt="dev.finances" src=".github/dev-finances.gif" width="100%">
 </p>
 
 ## 🚀 Technology
@@ -27,10 +27,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 💻 Project
 
 O dev.finances é uma aplicação de controle financeiro, onde é possível cadastrar e excluir transações e ver o saldo de entrada e saída 💰
-
-## 🔖 Layout
-
-Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/7Vu9DzUaCZIV4nibzkjgB4/dev.finance%24-Maratona-Discover). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
 ## 🚧 New features
 
@@ -52,6 +48,6 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
 
 ---
 
-Projeto criado durante a maratona discovery da [Rocketseat](https://rocketseat.com.br/).
+Projeto criado durante a maratona discovery da 🚀[Rocketseat](https://rocketseat.com.br/) e ministrado pelo Mayke Brito, :wave: [participe da nossa comunidade!](https://discord.gg/YxU7fJT) 🚀.
 
 Feito com ♥ by Thiago Lourenço.
