@@ -10,21 +10,31 @@ const addTransaction = () => {
 const cancelTransaction = () => {
 	modal.classList.remove('active');
 }
+// handle Modal edit
+const Modal = {
+  modalOverlay: document.querySelector(".modal-overlay"),
+  modalTitle: document.querySelector("#form h2"),
+  editingIndex: -1,
 
-const handleSubmit = (e) => {
-	e.preventDefault()
+  toggle(isEdit = false, index = -1) {
+    Form.clearFields();
+    Modal.modalOverlay.classList.toggle("active");
 
-	try {
-		Form.validateFields()
-		const transaction = Form.formatValues()
-		Transaction.add(transaction);
-		Form.clearFields();
+    if (isEdit && index !== -1) {
+      const data = Transaction.all[index];
 
-		cancelTransaction();
-	} catch (error) {
-		console.error(error.message);
-	}
-}
+      Modal.editingIndex = index;
+      Modal.modalTitle.innerHTML = "Editar transação";
+
+      Form.description.value = data.description;
+      Form.amount.value = data.amount / 100;
+      Form.date.value = data.date.split("/").reverse().join("-");
+    } else {
+      Modal.modalTitle.innerHTML = "Nova transação";
+    }
+  },
+};
+
 // Fetch the existing value from localstorage
 const getStorage = () => {
 	let data = [];
@@ -41,28 +51,13 @@ const Transaction = {
 	
 	add(transaction) {
 		Transaction.all.push(transaction);
-		this.getNewId();
 		
 		App.reload();
 	},
 
-	getNewId() {
-
-		let transactionID = parseInt(localStorage.getItem('transactionID'));
-
-		if (!transactionID > 0) transactionID = 0;
-
-		transactionID++;
-
-		localStorage.setItem('transactionID', transactionID);
-
-		return transactionID;
-	},
-
-	update() {
-		console.log(this.all);
-		addTransaction();
-	
+	update(index) {
+		if (Transaction.all[index]) Modal.toggle(true, index);
+		return;
 	},
 
 	remove(index) {
@@ -146,7 +141,7 @@ const DOM = {
 	},
 
 	clearTransactions() {
-		DOM.transactionsContainer.innerHTML = "";
+		DOM.transactionsContainer.innerHTML = '';
 	}
 }
 
@@ -158,7 +153,7 @@ class Utils {
 	}
 
 	static formatCurrency(value) {
-		const signal = Number(value) < 0 ? "-" : "";
+		const signal = Number(value) < 0 ? '-' : '';
 		
 		value = String(value).replace(/\D/g, '');
 		
@@ -219,9 +214,7 @@ const Form = {
 
 	formatValues() {
 		let { description, amount, date } = Form.getValues();
-
 		amount = Utils.formatAmount(amount);
-
 		date = Utils.formatDate(date);
 
 		return {
@@ -231,11 +224,47 @@ const Form = {
 		};
 	},
 
+	saveTransaction(transaction) {
+    Transaction.add(transaction);
+  },
+
 	clearFields() {
 		Form.description.value = '';
 		Form.amount.value = '';
 		Form.date.value = '';
+		Modal.editingIndex = -1;
 	},
+}
+
+const handleSubmit = (e) => {
+	e.preventDefault()
+
+	try {
+		Form.validateFields()
+		const transaction = Form.formatValues()
+		
+		if (Modal.editingIndex !== -1) {
+			const data = Transaction.all[Modal.editingIndex];
+			const result = confirm(
+				'Deseja confirmar a alteração do registro?'
+			);
+
+			if (result) {
+				data.description = transaction.description;
+				data.amount = transaction.amount;
+				data.date = transaction.date;
+
+				setStorage(Transaction.all);
+				App.reload();
+			}
+		} else {
+			Form.saveTransaction(transaction);
+		}
+		Form.clearFields();
+		Modal.toggle();
+	} catch (error) {
+		console.error(error.message);
+	}
 }
 
 const App = {
