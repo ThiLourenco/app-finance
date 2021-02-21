@@ -39,7 +39,7 @@ O dev.finances é uma aplicação de controle financeiro, onde é possível cada
 - [X] Glassmorphism effect - [Youtube Link](https://www.youtube.com/watch?v=hv0rNxr1XXk)
 - [X] C
 - [X] R
-- [ ] U - ( Loading... )
+- [X] U
 - [X] D
 
 ## :memo: License

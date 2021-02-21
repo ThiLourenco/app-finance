@@ -523,9 +523,9 @@ footer {
   opacity: 0.6;
 }
 
-footer.githubIcon {
+/* footer.githubIcon {
   background-image: url('./assets/Github.svg');
-}
+} */
 
 footer p a {
   font-weight: 500;
