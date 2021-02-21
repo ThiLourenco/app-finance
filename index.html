@@ -24,7 +24,7 @@
   <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
 
   <link rel="shortcut icon" href="./assets/dollar.svg">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,700;1,100;1,300;1,400&display=swap" rel="stylesheet">  
 
@@ -147,7 +147,15 @@
     <p>dev.finance$</p>
     
   </footer>
-
+  <script src="src/vanilla-tilt.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".card"), {
+      max: 25,
+      speed: 400,
+      glare: true,
+      "max-glare": 1,
+    });
+    </script>
   <script src="src/theme.js"></script>
   <script src="src/main.js"></script>
 </body>

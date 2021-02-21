@@ -300,7 +300,16 @@ header {
 .card {
   background: var(--white);
   padding: 1.5rem 2rem;
-  border-radius: .25rem;
+  border-radius: 0.3rem;
+
+  /* card glassmorphism */
+  box-shadow: 10px 10px 25px #12121280;
+  background: #ffffffef;
+  overflow: hidden;
+
+  border-top: 1px solid #ffffff80;
+  border-left: 1px solid #ffffff80;
+  backdrop-filter: blur(5px);
 
   margin-top: 2rem;
 
