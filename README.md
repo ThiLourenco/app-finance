@@ -38,12 +38,13 @@ Você pode visualizar o layout do projeto através [desse link](https://www.figm
 - [X] Add custom error message for each field
 - [X] Add dark-mode
 - [X] Responsiveness
+- [X] Add icons
+- [X] Transition effects
+- [X] Glassmorphism effect - [Youtube Link](https://www.youtube.com/watch?v=hv0rNxr1XXk)
 - [X] C
 - [X] R
 - [ ] U - ( Loading... )
 - [X] D
-- [X] Add icons
-- [X] Transition effects
 
 ## :memo: License
 
