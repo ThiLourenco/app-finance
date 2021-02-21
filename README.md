@@ -41,6 +41,7 @@ O dev.finances é uma aplicação de controle financeiro, onde é possível cada
 - [X] R
 - [X] U
 - [X] D
+- [ ] Loading...
 
 ## :memo: License
 
